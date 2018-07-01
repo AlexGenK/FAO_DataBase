@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_24_064603) do
+ActiveRecord::Schema.define(version: 2018_07_01_140512) do
+
+  create_table "questionnaires", force: :cascade do |t|
+    t.string "fio"
+    t.integer "code"
+    t.string "sex"
+    t.integer "age_years"
+    t.integer "age_months"
+    t.string "place"
+    t.integer "graduate"
+    t.integer "weight"
+    t.integer "height"
+    t.integer "bmi"
+    t.boolean "abdominal_pain"
+    t.boolean "headache"
+    t.boolean "concentration"
+    t.boolean "fatigability"
+    t.string "average_score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
