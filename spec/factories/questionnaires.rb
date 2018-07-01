@@ -1,19 +1,19 @@
 FactoryBot.define do
   factory :questionnaire do
-    fio "MyString"
-    code 1
-    sex "MyString"
-    age_years 1
-    age_months 1
-    place "MyString"
-    graduate 1
-    weight 1
-    height 1
-    bmi 1
+    fio "John Doe"
+    code 12345
+    sex "M"
+    age_years 10
+    age_months 128
+    place "City"
+    graduate 4
+    weight 36
+    height 128
+    bmi 10
     abdominal_pain false
     headache false
-    concentration false
+    concentration true
     fatigability false
-    average_score "MyString"
+    average_score "5-8"
   end
 end
