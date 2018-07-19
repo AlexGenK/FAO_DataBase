@@ -23,6 +23,7 @@
 		<table class="table table-bordered table-hover table-sm">
 			<thead>
 				<tr>
+					<th scope='col'></th>
 					<th scope='col'>ФИО</th>
 					<th scope='col'>Код</th>
 				</tr>
@@ -30,6 +31,10 @@
 			<tbody>
 			<% @questionnaires.each do |item| %>
 				<tr>
+					<td>
+						<%= button_to 'Удалить', item, method: :delete, class: 'btn btn-outline-danger btn-sm', 
+									   data: { confirm: 'Вы уверенны?' } %>
+					</td>
 					<td><%= item.fio %></td>
 					<td><%= item.code %></td>
 				</tr>

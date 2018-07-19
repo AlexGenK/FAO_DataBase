@@ -1,4 +1,5 @@
 class QuestionnairesController < ApplicationController
+  before_action :set_questionnaire, only: [:show, :edit, :update, :destroy]
 
   def index
     @questionnaires = Questionnaire.order(:fio)
@@ -19,7 +20,16 @@ class QuestionnairesController < ApplicationController
     end
   end
 
+  def destroy
+    @questionnaire.destroy
+    redirect_to questionnaires_path, notice: 'Questionnaire was successfully destroyed.'
+  end
+
   private
+
+  def set_questionnaire
+      @questionnaire = Questionnaire.find(params[:id])
+  end
 
   def questionnaire_params
       params.require(:questionnaire).permit(:fio, :code, :sex, :age_years, :age_months, :place, :graduate, 
