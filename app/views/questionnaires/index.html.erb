@@ -1,2 +1,40 @@
-<h1>Index of questionnaires</h1>
-<%= "Total #{@count} questionnaires" %>
+<h3>Список анкет (всего <%= "#{@count}" %> шт.)</h3>
+
+<div class="row">
+  <div class='col-sm-12 col-md-6'>
+    <%= form_tag(questionnaires_path, :method => "get", id: "search-form") do %>
+      <div class='input-group'>
+        <%= text_field_tag :search, params[:search], placeholder: "ФИО", class: "form-control" %>
+        <span class='input-group-append'>
+          <%= submit_tag "Найти", class: "btn btn-outline-secondary" %>
+          <%= submit_tag "Показать все", class: "btn btn-outline-secondary" %>
+        </span>
+      </div>
+      <br>
+    <% end %>
+  </div>
+  <div class='col-sm-12 col-md-6'>
+    <%= link_to 'Создать новую анкету', new_questionnaire_path, class: "btn btn-outline-secondary" %>
+  </div>
+</div>
+
+<div class="row">
+	<div class='col-sm-12'>
+		<table class="table table-bordered table-hover table-sm">
+			<thead>
+				<tr>
+					<th scope='col'>ФИО</th>
+					<th scope='col'>Код</th>
+				</tr>
+			</thead>
+			<tbody>
+			<% @questionnaires.each do |item| %>
+				<tr>
+					<td><%= item.fio %></td>
+					<td><%= item.code %></td>
+				</tr>
+			<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

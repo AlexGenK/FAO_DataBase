@@ -1,8 +1,22 @@
 class QuestionnairesController < ApplicationController
 
   def index
-    @questionnaires = Questionnaire.all
+    @questionnaires = Questionnaire.order(:fio)
     @count = @questionnaires.count
+  end
+
+  def new
+    @questionnaire = Questionnaire.new
+  end
+
+  def create
+    @questionnaire = Questionnaire.new(questionnaire_params)
+
+    if @questionnaire.save
+      redirect_to questionnaires_path, notice: 'Questionnaire was successfully created.'
+    else
+      render :new
+    end
   end
 
   private
