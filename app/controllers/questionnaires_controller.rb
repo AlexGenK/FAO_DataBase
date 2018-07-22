@@ -25,6 +25,17 @@ class QuestionnairesController < ApplicationController
     redirect_to questionnaires_path, notice: 'Questionnaire was successfully destroyed.'
   end
 
+  def edit
+  end
+
+  def update
+    if @questionnaire.update(questionnaire_params)
+      redirect_to questionnaires_path, notice: 'Questionnaire was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
   private
 
   def set_questionnaire

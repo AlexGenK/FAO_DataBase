@@ -36,7 +36,9 @@
 							<%= octicon "x", class: "text-danger" %>
 						<% end %>
 					</td>
-					<td><%= item.fio %></td>
+					<td>
+						<%= link_to item.fio=='' ? '???????' : item.fio, edit_questionnaire_path(item) %>
+					</td>
 					<td><%= item.code %></td>
 				</tr>
 			<% end %>
