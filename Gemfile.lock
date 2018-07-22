@@ -124,6 +124,11 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.3-x64-mingw32)
       mini_portile2 (~> 2.3.0)
+    octicons (8.0.0)
+      nokogiri (>= 1.6.3.1)
+    octicons_helper (8.0.0)
+      octicons (= 8.0.0)
+      rails
     orm_adapter (0.5.0)
     popper_js (1.12.9)
     public_suffix (3.0.2)
@@ -241,6 +246,7 @@ DEPENDENCIES
   factory_bot_rails
   jbuilder (~> 2.5)
   jquery-rails
+  octicons_helper
   puma (~> 3.11)
   rails (~> 5.2.0)
   rspec-rails (~> 3.7)

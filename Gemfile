@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 
+gem 'octicons_helper'
+
 # Use Devise gem for authentication
 gem 'devise'
 
