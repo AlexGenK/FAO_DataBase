@@ -18,3 +18,11 @@
 body { 
 	padding-top: 70px; 
 }
+
+button.btn-outline-danger {
+	fill: red;
+}
+
+button.btn-outline-danger:hover {
+	fill: white;
+}

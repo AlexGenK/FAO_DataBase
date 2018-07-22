@@ -32,8 +32,9 @@
 			<% @questionnaires.each do |item| %>
 				<tr>
 					<td>
-						<%= button_to 'Удалить', item, method: :delete, class: 'btn btn-outline-danger btn-sm', 
-									   data: { confirm: 'Вы уверенны?' } %>
+						<%= button_to item, method: :delete, class: 'btn btn-outline-danger btn-sm', data: { confirm: 'Вы уверенны?' } do %>
+							<%= octicon "x", class: "text-danger" %>
+						<% end %>
 					</td>
 					<td><%= item.fio %></td>
 					<td><%= item.code %></td>
