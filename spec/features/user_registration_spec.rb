@@ -26,7 +26,7 @@ feature 'User registration', type: :feature do
     end
   end
 
-  context ' When user is registered' do
+  context 'When user is registered' do
     before do
       @user=create(:simple_user)
       click_link 'Log In'
