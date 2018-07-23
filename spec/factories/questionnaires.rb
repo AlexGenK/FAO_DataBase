@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :questionnaire do
-    fio "John Doe"
-    code 12345
+  factory :questionnaire, class: Questionnaire do
+    sequence(:fio) { |n| "John Doe #{n}" }
+    sequence(:code) { |n| n }
     sex "M"
     age_years 10
     age_months 128

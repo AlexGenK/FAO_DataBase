@@ -13,8 +13,8 @@ RSpec.describe Questionnaire, type: :model do
   end
 
   it "is not valid with not unique code" do
-    create(:questionnaire)
+    create(:questionnaire, code: 99)
+    subject.code = 99
     expect(subject).to_not be_valid
   end
-
 end
