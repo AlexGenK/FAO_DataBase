@@ -11,10 +11,10 @@
 
   <body>
     <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="questionnaires">
+      <%= link_to questionnaires_path, class: "navbar-brand" do %>
         <%= image_tag('FAO_logo.svg', width: '30', heigth: '30', class: 'd-inline-block align-top') %>
         FAO questionnaires database
-      </a>
+      <% end %>
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
           <li class="nav-item">
