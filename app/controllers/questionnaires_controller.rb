@@ -2,7 +2,11 @@ class QuestionnairesController < ApplicationController
   before_action :set_questionnaire, only: [:show, :edit, :update, :destroy]
 
   def index
-    @questionnaires = Questionnaire.order(:fio)
+    params[:search]='' if params[:commit]=='Показать все'
+    params[:search].strip! if params[:search]
+    @questionnaires = Questionnaire.where('fio LIKE ? OR code LIKE ?',
+                                          "%#{params[:search]}%",
+                                          "%#{params[:search]}%").order(:fio)
     @count = @questionnaires.count
   end
 
