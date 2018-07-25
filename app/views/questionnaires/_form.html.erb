@@ -12,6 +12,7 @@
 				<%= f.label :code, "Код", class: "col-sm-2 control-label" %>
 				<div class="col-sm-10">
 					<%= f.number_field :code, class: "form-control" %>
+					<div class="invalid-feedback">Код не может быть пустым или повторяться</div>
 				</div>
 			</div>
 
