@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_01_140512) do
+ActiveRecord::Schema.define(version: 2018_07_25_181209) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "fio"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_07_01_140512) do
     t.string "average_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user"
   end
 
   create_table "users", force: :cascade do |t|
