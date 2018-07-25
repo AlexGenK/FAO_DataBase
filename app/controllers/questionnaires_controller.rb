@@ -21,15 +21,16 @@ class QuestionnairesController < ApplicationController
     @questionnaire.user = current_user.email
 
     if @questionnaire.save
-      redirect_to questionnaires_path, notice: 'Questionnaire was successfully created.'
+      redirect_to questionnaires_path, notice: 'Анкета успешно создана.'
     else
+      flash[:alert] = 'Анкета заполнена неверно.'
       render :new
     end
   end
 
   def destroy
     @questionnaire.destroy
-    redirect_to questionnaires_path, notice: 'Questionnaire was successfully destroyed.'
+    redirect_to questionnaires_path, notice: 'Анкета успешно удалена.'
   end
 
   def edit
@@ -37,8 +38,9 @@ class QuestionnairesController < ApplicationController
 
   def update
     if @questionnaire.update(questionnaire_params)
-      redirect_to questionnaires_path, notice: 'Questionnaire was successfully updated.'
+      redirect_to questionnaires_path, notice: 'Анкета успешно отредактирована.'
     else
+      flash[:alert] = 'Анкета заполнена неверно.'
       render :edit
     end
   end
