@@ -33,4 +33,22 @@ feature 'Work with questionnaires', type: :feature do
     expect(page).to have_content 'Molly Millions'
     expect(page).to have_questionnaires_in_quantity 5
   end
+
+  scenario 'User can find questionnaire by FIO' do
+    fill_in('search', with: @quest_list[1].fio)
+    click_button 'Найти'
+    expect(page).to have_questionnaires_in_quantity 1
+    expect(page).to have_content(@quest_list[1].fio, count: 1)
+    click_button 'Показать все'
+    expect(page).to have_questionnaires_in_quantity 5
+  end
+
+  scenario 'User can find questionnaire by code' do
+    fill_in('search', with: @quest_list[2].code)
+    click_button 'Найти'
+    expect(page).to have_questionnaires_in_quantity 1
+    expect(page).to have_content(@quest_list[2].code, count: 2)
+    click_button 'Показать все'
+    expect(page).to have_questionnaires_in_quantity 5
+  end
 end
