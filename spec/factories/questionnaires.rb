@@ -15,5 +15,6 @@ FactoryBot.define do
     concentration true
     fatigability false
     average_score "5-8"
+    user "simple_user@mail.no"
   end
 end
