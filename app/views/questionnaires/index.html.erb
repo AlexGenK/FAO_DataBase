@@ -37,7 +37,7 @@
 						<% end %>
 					</td>
 					<td>
-						<%= link_to item.fio=='' ? '???????' : item.fio, edit_questionnaire_path(item) %>
+						<%= link_to (item.fio=='' || (!user_signed_in?))  ? '???????' : item.fio, edit_questionnaire_path(item) %>
 					</td>
 					<td><%= item.code %></td>
 				</tr>

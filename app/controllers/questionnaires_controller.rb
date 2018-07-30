@@ -1,12 +1,12 @@
 class QuestionnairesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :set_questionnaire, only: [:show, :edit, :update, :destroy]
 
   def index
     params[:search]='' if params[:commit]=='Показать все'
     params[:search].strip! if params[:search]
     @questionnaires = Questionnaire.where('user LIKE ? AND (fio LIKE ? OR code LIKE ?)',
-                                          current_user.email,
+                                          user_signed_in? ? current_user.email : '%',
                                           "%#{params[:search]}%",
                                           "%#{params[:search]}%").order(:fio)
     @count = @questionnaires.count
