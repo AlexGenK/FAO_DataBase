@@ -15,7 +15,83 @@
 					<div class="invalid-feedback">Код не может быть пустым или повторяться</div>
 				</div>
 			</div>
-
+			<div class="form-group row">
+				<%= f.label :sex, "Пол ребенка", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.select :sex, [['Мужской', 'M'], ['Женский', 'F']], {}, {class: "form-control"} %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :age_years, "Возраст в полных годах", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.number_field :age_years, class: "form-control" %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :age_months, "Возраст в полных месяцах", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.number_field :age_months, class: "form-control" %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :place, "Место проживания", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.select :place, [['Город', 'C'], ['Село', 'V']], {}, {class: "form-control"} %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :graduate, "Уровень образования", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.select :graduate, [['1 класс', 1], 
+											 ['2 класс', 2], 
+											 ['3 класс', 3], 
+											 ['4 класс', 4]], {}, {class: "form-control"} %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :weight, "Масса тела", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.number_field :weight, class: "form-control" %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :height, "Рост", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.number_field :height, class: "form-control" %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :bmi, "Индекс массы тела", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.number_field :bmi, class: "form-control" %>
+				</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :abdominal_pain, "Боли в животе", class: "col-sm-2 control-label" %>
+				<div class="col-sm-1">
+          			<%= f.check_box :abdominal_pain %>
+        		</div>
+        		<%= f.label :headache, "Головные боли", class: "col-sm-2 control-label" %>
+				<div class="col-sm-1">
+          			<%= f.check_box :headache %>
+        		</div>
+        		<%= f.label :concentration, "Проблемы с концентрацией", class: "col-sm-2 control-label" %>
+				<div class="col-sm-1">
+          			<%= f.check_box :concentration %>
+        		</div>
+        		<%= f.label :fatigability, "Частая утомляемость", class: "col-sm-2 control-label" %>
+				<div class="col-sm-1">
+          			<%= f.check_box :fatigability %>
+        		</div>
+			</div>
+			<div class="form-group row">
+				<%= f.label :average_score, "Школьная успеваемость", class: "col-sm-2 control-label" %>
+				<div class="col-sm-10">
+					<%= f.select :average_score, [['Средний балл 1-4', '1-4'], 
+												  ['Средний балл 5-8', '5-8'], 
+												  ['Средний балл 9-12', '9-12']], {}, {class: "form-control"} %>
+				</div>
+			</div>
 		</div>
 	</div>
 	<br>
