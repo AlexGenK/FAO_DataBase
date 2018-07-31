@@ -1,6 +1,8 @@
 class QuestionnairesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :set_questionnaire, only: [:show, :edit, :update, :destroy]
+  before_action :detect_invalid_user, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :denied_action
 
   def index
     params[:search]='' if params[:commit]=='Показать все'
@@ -55,5 +57,13 @@ class QuestionnairesController < ApplicationController
       params.require(:questionnaire).permit(:fio, :code, :sex, :age_years, :age_months, :place, :graduate, 
                                             :weight, :height, :bmi, :abdominal_pain, :headache, :concentration,
                                             :fatigability, :average_score)
+  end
+
+  def detect_invalid_user
+    denied_action if @questionnaire.user != current_user.email
+  end
+
+  def denied_action
+    redirect_to :questionnaires, alert: "Попытка доступа к не существующей или созданной не Вами анкете"
   end
 end
