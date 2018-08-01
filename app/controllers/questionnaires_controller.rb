@@ -7,10 +7,10 @@ class QuestionnairesController < ApplicationController
   def index
     params[:search]='' if params[:commit]=='Показать все'
     params[:search].strip! if params[:search]
-    @questionnaires = Questionnaire.where('user LIKE ? AND (fio LIKE ? OR code LIKE ?)',
+    @questionnaires = Questionnaire.where('user LIKE ? AND (fio LIKE ? OR code = ?)',
                                           user_signed_in? ? current_user.email : '%',
                                           "%#{params[:search]}%",
-                                          "%#{params[:search]}%").order(:fio)
+                                          params[:search]).order(:fio)
     @count = @questionnaires.count
   end
 
