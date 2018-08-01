@@ -26,6 +26,19 @@
 					<th scope='col'></th>
 					<th scope='col'>ФИО</th>
 					<th scope='col'>Код</th>
+					<th scope='col'>Пол</th>
+					<th scope='col'>Возраст (года)</th>
+					<th scope='col'>Возраст (месяцы)</th>
+					<th scope='col'>Проживание</th>
+					<th scope='col'>Класс</th>
+					<th scope='col'>Масса</th>
+					<th scope='col'>Рост</th>
+					<th scope='col'>Индекс массы</th>
+					<th scope='col'>Боли в животе</th>
+					<th scope='col'>Головные боли</th>
+					<th scope='col'>Концентрация</th>
+					<th scope='col'>Утомляемость</th>
+					<th scope='col'>Успеваемость</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -40,6 +53,19 @@
 						<%= link_to (item.fio=='' || (!user_signed_in?))  ? '???????' : item.fio, edit_questionnaire_path(item) %>
 					</td>
 					<td><%= item.code %></td>
+					<td><%= item.sex %></td>
+					<td><%= item.age_years %></td>
+					<td><%= item.age_months %></td>
+					<td><%= item.place %></td>
+					<td><%= item.graduate %></td>
+					<td><%= item.weight %></td>
+					<td><%= item.height %></td>
+					<td><%= item.bmi %></td>
+					<td><%= item.abdominal_pain ? octicon("check") : "" %></td>
+					<td><%= item.headache ? octicon("check") : "" %></td>
+					<td><%= item.concentration ? octicon("check") : "" %></td>
+					<td><%= item.fatigability ? octicon("check") : "" %></td>
+					<td><%= item.average_score %></td>
 				</tr>
 			<% end %>
 			</tbody>
