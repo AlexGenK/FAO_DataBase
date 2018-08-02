@@ -57,7 +57,7 @@ feature 'Work with questionnaires', type: :feature do
       fill_in('search', with: @quest_list[2].code)
       click_button 'Найти'
       expect(page).to have_questionnaires_in_quantity 1
-      expect(page).to have_content(@quest_list[2].code, count: 2)
+      expect(page).to have_content(@quest_list[2].fio, count: 1)
       click_button 'Показать все'
       expect(page).to have_questionnaires_in_quantity 5
     end
@@ -88,7 +88,7 @@ feature 'Work with questionnaires', type: :feature do
       fill_in('search', with: @quest_list[2].code)
       click_button 'Найти'
       expect(page).to have_questionnaires_in_quantity 1
-      expect(page).to have_content(@quest_list[2].code, count: 1)
+      expect(page).to have_content("??????? #{@quest_list[2].code}" , count: 1)
       click_button 'Показать все'
       expect(page).to have_questionnaires_in_quantity 5
     end
