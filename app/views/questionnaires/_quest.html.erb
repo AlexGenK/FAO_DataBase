@@ -1,0 +1,17 @@
+<% visual_lines.each do |key, value| %>
+	<% if value.is_a? String %>
+		<div class="form-group row">
+			<div class="col-sm-5">
+				<%= key %>
+			</div>
+		</div>
+	<% else %>
+		<div class="card">
+			<h5 class="card-header"><%= key %></h5>
+			<div class="card-body">
+		<%= render 'quest', visual_lines: value %>
+	<% end %>
+<% end %>
+</div>
+</div>
+<br>
