@@ -1,15 +1,18 @@
 <% visual_lines.each do |key, value| %>
-	<% if value.is_a? String %>
+	<% if value.is_a? Symbol %>
 		<div class="form-group row">
-			<div class="col-sm-5">
-				<%= key %>
+			<div class="form-check">
+				<div class="col-sm-12">
+					<%= form.check_box value, class: "form-check-input" %>
+					<%= form.label value, key, class: "form-check-label" %>
+				</div>
 			</div>
 		</div>
 	<% else %>
 		<div class="card">
 			<h5 class="card-header"><%= key %></h5>
 			<div class="card-body">
-			<%= render 'quest', visual_lines: value %>
+			<%= render partial: 'quest', locals: {visual_lines: value, form: form} %>
 			</div>
 		</div>
 		<br>
