@@ -57,11 +57,11 @@ class QuestionnairesController < ApplicationController
       params.require(:questionnaire).permit(:fio, :code, :sex, :age_years, :age_months, :place, :graduate, 
                                             :weight, :height, :bmi, :abdominal_pain, :headache, :concentration,
                                             :fatigability, :average_score,
-                                            :i_1_2, :i_1_3, :i_1_4, :i_1_5, :i_1_6, :i_1_7, :i_1_8, :i_1_9,
-                                            :i_1_10, :i_1_11, :i_2_1, :i_2_2, :i_2_3, :i_2_4, :i_2_5, :i_2_6,
-                                            :i_2_7, :i_2_8, :i_2_9, :i_2_10, :i_2_11, :i_2_12, :i_2_13, :i_3_1,
-                                            :i_3_2, :i_3_3, :i_3_4, :i_3_5, :i_3_6, :i_3_7, :i_3_8, :i_3_9,
-                                            :i_3_10, :i_3_11)
+                                            :i_1_1, :i_1_2, :i_1_3, :i_1_4, :i_1_5, :i_1_6, :i_1_7, :i_1_8,
+                                            :i_1_9, :i_1_10, :i_1_11, :i_2_1, :i_2_2, :i_2_3, :i_2_4, :i_2_5,
+                                            :i_2_6, :i_2_7, :i_2_8, :i_2_9, :i_2_10, :i_2_11, :i_2_12, :i_2_13,
+                                            :i_3_1, :i_3_2, :i_3_3, :i_3_4, :i_3_5, :i_3_6, :i_3_7, :i_3_8,
+                                            :i_3_9, :i_3_10, :i_3_11)
   end
 
   def detect_invalid_user
