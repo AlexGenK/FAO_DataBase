@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_25_181209) do
+ActiveRecord::Schema.define(version: 2018_08_03_174145) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "fio"
@@ -31,6 +31,41 @@ ActiveRecord::Schema.define(version: 2018_07_25_181209) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "user"
+    t.boolean "i_1_1"
+    t.boolean "i_1_2"
+    t.boolean "i_1_3"
+    t.boolean "i_1_4"
+    t.boolean "i_1_5"
+    t.boolean "i_1_6"
+    t.boolean "i_1_7"
+    t.boolean "i_1_8"
+    t.boolean "i_1_9"
+    t.boolean "i_1_10"
+    t.boolean "i_1_11"
+    t.boolean "i_2_1"
+    t.boolean "i_2_2"
+    t.boolean "i_2_3"
+    t.boolean "i_2_4"
+    t.boolean "i_2_5"
+    t.boolean "i_2_6"
+    t.boolean "i_2_7"
+    t.boolean "i_2_8"
+    t.boolean "i_2_9"
+    t.boolean "i_2_10"
+    t.boolean "i_2_11"
+    t.boolean "i_2_12"
+    t.boolean "i_2_13"
+    t.boolean "i_3_1"
+    t.boolean "i_3_2"
+    t.boolean "i_3_3"
+    t.boolean "i_3_4"
+    t.boolean "i_3_5"
+    t.boolean "i_3_6"
+    t.boolean "i_3_7"
+    t.boolean "i_3_8"
+    t.boolean "i_3_9"
+    t.boolean "i_3_10"
+    t.boolean "i_3_11"
   end
 
   create_table "users", force: :cascade do |t|
