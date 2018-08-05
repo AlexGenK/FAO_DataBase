@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_04_061916) do
+ActiveRecord::Schema.define(version: 2018_08_05_172031) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "fio"
@@ -142,6 +142,51 @@ ActiveRecord::Schema.define(version: 2018_08_04_061916) do
     t.boolean "i_17_1"
     t.boolean "i_17_2"
     t.boolean "i_17_3"
+    t.boolean "ii_1_1"
+    t.boolean "ii_1_2"
+    t.boolean "ii_1_3"
+    t.boolean "ii_1_4"
+    t.boolean "ii_1_5"
+    t.boolean "ii_1_6"
+    t.boolean "ii_1_7"
+    t.boolean "ii_1_8"
+    t.boolean "ii_1_9"
+    t.boolean "ii_2_1"
+    t.boolean "ii_2_2"
+    t.boolean "ii_2_3"
+    t.boolean "ii_2_4"
+    t.boolean "ii_2_5"
+    t.boolean "ii_2_6"
+    t.boolean "ii_2_7"
+    t.boolean "ii_2_8"
+    t.boolean "ii_2_9"
+    t.boolean "ii_2_10"
+    t.boolean "ii_2_11"
+    t.boolean "ii_2_12"
+    t.boolean "ii_3_1"
+    t.boolean "ii_3_2"
+    t.boolean "ii_3_3"
+    t.boolean "ii_4_1"
+    t.boolean "ii_4_2"
+    t.boolean "ii_4_3"
+    t.boolean "ii_4_4"
+    t.boolean "ii_4_5"
+    t.boolean "ii_4_6"
+    t.boolean "ii_4_7"
+    t.boolean "ii_4_8"
+    t.boolean "ii_4_9"
+    t.boolean "ii_4_10"
+    t.boolean "ii_4_11"
+    t.boolean "ii_4_12"
+    t.boolean "ii_5_1"
+    t.boolean "ii_5_2"
+    t.boolean "ii_5_3"
+    t.boolean "ii_5_4"
+    t.text "ii_5_5"
+    t.boolean "ii_6_1"
+    t.boolean "ii_6_2"
+    t.boolean "ii_6_3"
+    t.text "ii_6_4"
   end
 
   create_table "users", force: :cascade do |t|
