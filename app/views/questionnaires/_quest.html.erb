@@ -17,6 +17,13 @@
 				<%= form.text_field value, class: "form-control" %>
 			</div>
 		</div>
+		<% when :integer %>
+		<div class="form-group row">
+			<div class="col-sm-12">
+				<%= form.label value, key %>
+				<%= form.number_field value, class: "form-control" %>
+			</div>
+		</div>
 		<% end %>
 	<% else %>
 		<div class="card">
