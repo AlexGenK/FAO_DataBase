@@ -1,0 +1,55 @@
+class AddPartVToQuestionnaires < ActiveRecord::Migration[5.2]
+  def change
+    add_column :questionnaires, :v_1_1, :boolean
+    add_column :questionnaires, :v_1_2, :boolean
+    add_column :questionnaires, :v_1_3, :boolean
+    add_column :questionnaires, :v_1_4, :boolean
+    add_column :questionnaires, :v_1_5, :boolean
+    add_column :questionnaires, :v_1_6, :boolean
+    add_column :questionnaires, :v_1_7, :boolean
+    add_column :questionnaires, :v_1_8, :boolean
+    add_column :questionnaires, :v_2_1, :boolean
+    add_column :questionnaires, :v_2_2, :boolean
+    add_column :questionnaires, :v_2_3, :boolean
+    add_column :questionnaires, :v_3_1, :boolean
+    add_column :questionnaires, :v_3_2, :boolean
+    add_column :questionnaires, :v_3_3, :boolean
+    add_column :questionnaires, :v_3_4, :boolean
+    add_column :questionnaires, :v_3_5, :boolean
+    add_column :questionnaires, :v_4_1, :boolean
+    add_column :questionnaires, :v_4_2, :boolean
+    add_column :questionnaires, :v_4_3, :boolean
+    add_column :questionnaires, :v_5_1, :boolean
+    add_column :questionnaires, :v_5_2, :boolean
+    add_column :questionnaires, :v_5_3, :boolean
+    add_column :questionnaires, :v_5_4, :text
+    add_column :questionnaires, :v_6_1, :boolean
+    add_column :questionnaires, :v_6_2, :boolean
+    add_column :questionnaires, :v_6_3, :boolean
+    add_column :questionnaires, :v_6_4, :text
+    add_column :questionnaires, :v_7_1, :boolean
+    add_column :questionnaires, :v_7_2, :boolean
+    add_column :questionnaires, :v_7_3, :boolean
+    add_column :questionnaires, :v_7_4, :text
+    add_column :questionnaires, :v_8_1, :boolean
+    add_column :questionnaires, :v_8_2, :boolean
+    add_column :questionnaires, :v_8_3, :boolean
+    add_column :questionnaires, :v_8_4, :text
+    add_column :questionnaires, :v_9_1, :boolean
+    add_column :questionnaires, :v_9_2, :boolean
+    add_column :questionnaires, :v_9_3, :boolean
+    add_column :questionnaires, :v_9_4, :text
+    add_column :questionnaires, :v_10_1, :boolean
+    add_column :questionnaires, :v_10_2, :boolean
+    add_column :questionnaires, :v_10_3, :boolean
+    add_column :questionnaires, :v_10_4, :text
+    add_column :questionnaires, :v_11_1, :boolean
+    add_column :questionnaires, :v_11_2, :boolean
+    add_column :questionnaires, :v_11_3, :boolean
+    add_column :questionnaires, :v_11_4, :text
+    add_column :questionnaires, :v_12_1, :boolean
+    add_column :questionnaires, :v_12_2, :boolean
+    add_column :questionnaires, :v_12_3, :boolean
+    add_column :questionnaires, :v_12_4, :text
+  end
+end
