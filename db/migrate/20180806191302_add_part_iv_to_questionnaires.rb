@@ -1,0 +1,48 @@
+class AddPartIvToQuestionnaires < ActiveRecord::Migration[5.2]
+  def change
+    add_column :questionnaires, :iv_1_1, :text
+    add_column :questionnaires, :iv_2_1, :text
+    add_column :questionnaires, :iv_3_1, :boolean
+    add_column :questionnaires, :iv_3_2, :boolean
+    add_column :questionnaires, :iv_3_3, :boolean
+    add_column :questionnaires, :iv_4_1, :boolean
+    add_column :questionnaires, :iv_4_2, :boolean
+    add_column :questionnaires, :iv_4_3, :boolean
+    add_column :questionnaires, :iv_5_1, :boolean
+    add_column :questionnaires, :iv_5_2, :boolean
+    add_column :questionnaires, :iv_5_3, :boolean
+    add_column :questionnaires, :iv_6_1, :boolean
+    add_column :questionnaires, :iv_6_2, :boolean
+    add_column :questionnaires, :iv_6_3, :boolean
+    add_column :questionnaires, :iv_6_4, :boolean
+    add_column :questionnaires, :iv_7_1, :boolean
+    add_column :questionnaires, :iv_7_2, :boolean
+    add_column :questionnaires, :iv_7_3, :boolean
+    add_column :questionnaires, :iv_7_4, :boolean
+    add_column :questionnaires, :iv_8_1, :boolean
+    add_column :questionnaires, :iv_8_2, :integer
+    add_column :questionnaires, :iv_8_3, :integer
+    add_column :questionnaires, :iv_8_4, :boolean
+    add_column :questionnaires, :iv_8_5, :integer
+    add_column :questionnaires, :iv_8_6, :integer
+    add_column :questionnaires, :iv_8_7, :boolean
+    add_column :questionnaires, :iv_8_8, :integer
+    add_column :questionnaires, :iv_8_9, :integer
+    add_column :questionnaires, :iv_8_10, :boolean
+    add_column :questionnaires, :iv_8_11, :integer
+    add_column :questionnaires, :iv_8_12, :integer
+    add_column :questionnaires, :iv_8_13, :boolean
+    add_column :questionnaires, :iv_8_14, :integer
+    add_column :questionnaires, :iv_8_15, :integer
+    add_column :questionnaires, :iv_8_16, :boolean
+    add_column :questionnaires, :iv_8_17, :integer
+    add_column :questionnaires, :iv_8_18, :integer
+    add_column :questionnaires, :iv_9_1, :boolean
+    add_column :questionnaires, :iv_9_2, :boolean
+    add_column :questionnaires, :iv_9_3, :boolean
+    add_column :questionnaires, :iv_10_1, :boolean
+    add_column :questionnaires, :iv_10_2, :boolean
+    add_column :questionnaires, :iv_10_3, :boolean
+    add_column :questionnaires, :iv_10_4, :boolean
+  end
+end

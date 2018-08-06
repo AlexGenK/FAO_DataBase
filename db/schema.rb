@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_163036) do
+ActiveRecord::Schema.define(version: 2018_08_06_191302) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "fio"
@@ -328,6 +328,50 @@ ActiveRecord::Schema.define(version: 2018_08_06_163036) do
     t.boolean "iii_23_2"
     t.boolean "iii_23_3"
     t.text "iii_23_4"
+    t.text "iv_1_1"
+    t.text "iv_2_1"
+    t.boolean "iv_3_1"
+    t.boolean "iv_3_2"
+    t.boolean "iv_3_3"
+    t.boolean "iv_4_1"
+    t.boolean "iv_4_2"
+    t.boolean "iv_4_3"
+    t.boolean "iv_5_1"
+    t.boolean "iv_5_2"
+    t.boolean "iv_5_3"
+    t.boolean "iv_6_1"
+    t.boolean "iv_6_2"
+    t.boolean "iv_6_3"
+    t.boolean "iv_6_4"
+    t.boolean "iv_7_1"
+    t.boolean "iv_7_2"
+    t.boolean "iv_7_3"
+    t.boolean "iv_7_4"
+    t.boolean "iv_8_1"
+    t.integer "iv_8_2"
+    t.integer "iv_8_3"
+    t.boolean "iv_8_4"
+    t.integer "iv_8_5"
+    t.integer "iv_8_6"
+    t.boolean "iv_8_7"
+    t.integer "iv_8_8"
+    t.integer "iv_8_9"
+    t.boolean "iv_8_10"
+    t.integer "iv_8_11"
+    t.integer "iv_8_12"
+    t.boolean "iv_8_13"
+    t.integer "iv_8_14"
+    t.integer "iv_8_15"
+    t.boolean "iv_8_16"
+    t.integer "iv_8_17"
+    t.integer "iv_8_18"
+    t.boolean "iv_9_1"
+    t.boolean "iv_9_2"
+    t.boolean "iv_9_3"
+    t.boolean "iv_10_1"
+    t.boolean "iv_10_2"
+    t.boolean "iv_10_3"
+    t.boolean "iv_10_4"
   end
 
   create_table "users", force: :cascade do |t|
