@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Bootstrap as a interface framework
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+# Pagination
+gem 'pagy'
 
 gem 'octicons_helper'
 
