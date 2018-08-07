@@ -143,7 +143,14 @@ class QuestionnairesController < ApplicationController
                                             :v_9_1, :v_9_2, :v_9_3, :v_9_4,
                                             :v_10_1, :v_10_2, :v_10_3, :v_10_4,
                                             :v_11_1, :v_11_2, :v_11_3, :v_11_4,
-                                            :v_12_1, :v_12_2, :v_12_3, :v_12_4)
+                                            :v_12_1, :v_12_2, :v_12_3, :v_12_4,
+                                            :vi_1_1, :vi_1_2, :vi_1_3, :vi_1_4, :vi_1_5, :vi_1_6,
+                                            :vi_2_1, :vi_2_2, :vi_2_3, :vi_2_4,
+                                            :vi_3_1, :vi_3_2, :vi_3_3, :vi_3_4,
+                                            :vi_4_1, :vi_4_2, :vi_4_3, :vi_4_4,
+                                            :vi_5_1, :vi_5_2, :vi_5_3, :vi_5_4,
+                                            :vi_6_1, :vi_6_2, :vi_6_3, :vi_6_4,
+                                            :vi_7_1, :vi_7_2, :vi_7_3, :vi_7_4)
   end
 
   def detect_invalid_user

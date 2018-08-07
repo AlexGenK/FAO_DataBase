@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_200247) do
+ActiveRecord::Schema.define(version: 2018_08_07_034958) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "fio"
@@ -423,6 +423,36 @@ ActiveRecord::Schema.define(version: 2018_08_06_200247) do
     t.boolean "v_12_2"
     t.boolean "v_12_3"
     t.text "v_12_4"
+    t.boolean "vi_1_1"
+    t.boolean "vi_1_2"
+    t.boolean "vi_1_3"
+    t.boolean "vi_1_4"
+    t.boolean "vi_1_5"
+    t.boolean "vi_1_6"
+    t.boolean "vi_2_1"
+    t.boolean "vi_2_2"
+    t.boolean "vi_2_3"
+    t.boolean "vi_2_4"
+    t.boolean "vi_3_1"
+    t.boolean "vi_3_2"
+    t.boolean "vi_3_3"
+    t.boolean "vi_3_4"
+    t.boolean "vi_4_1"
+    t.boolean "vi_4_2"
+    t.boolean "vi_4_3"
+    t.text "vi_4_4"
+    t.boolean "vi_5_1"
+    t.boolean "vi_5_2"
+    t.boolean "vi_5_3"
+    t.text "vi_5_4"
+    t.boolean "vi_6_1"
+    t.boolean "vi_6_2"
+    t.boolean "vi_6_3"
+    t.text "vi_6_4"
+    t.boolean "vi_7_1"
+    t.boolean "vi_7_2"
+    t.boolean "vi_7_3"
+    t.text "vi_7_4"
   end
 
   create_table "users", force: :cascade do |t|
