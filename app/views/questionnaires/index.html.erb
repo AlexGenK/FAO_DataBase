@@ -4,7 +4,7 @@
   <div class='col-sm-12 col-md-6'>
     <%= form_tag(questionnaires_path, :method => "get", id: "search-form") do %>
       <div class='input-group'>
-        <%= text_field_tag :search, params[:search], placeholder: "ФИО", class: "form-control" %>
+        <%= text_field_tag :search, params[:search], placeholder: "ФИО или код", class: "form-control" %>
         <span class='input-group-append'>
           <%= submit_tag "Найти", class: "btn btn-outline-secondary" %>
           <%= submit_tag "Показать все", class: "btn btn-outline-secondary" %>
@@ -45,7 +45,7 @@
 			<% @questionnaires.each do |item| %>
 				<tr>
 					<td>
-						<%= button_to item, method: :delete, class: 'btn btn-outline-danger btn-sm', data: { confirm: 'Вы уверенны?' } do %>
+						<%= button_to item, method: :delete, class: 'btn btn-outline-danger btn-sm', data: { confirm: 'Вы уверенны, что хотите удалить запись?' } do %>
 							<%= octicon "x", class: "text-danger" %>
 						<% end %>
 					</td>
