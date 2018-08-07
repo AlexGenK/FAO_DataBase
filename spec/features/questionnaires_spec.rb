@@ -10,10 +10,10 @@ feature 'Work with questionnaires', type: :feature do
   context 'when User is logged in' do
     before do
       @user=create(:simple_user)
-      click_link 'Log In'
+      click_link 'Войти'
       fill_in 'Email', with: @user.email
-      fill_in 'Password', with: @user.password
-      click_button 'Log in'
+      fill_in 'Пароль', with: @user.password
+      click_button 'Войти'
     end
 
     scenario 'User can view full index of questionnaires' do
@@ -71,17 +71,17 @@ feature 'Work with questionnaires', type: :feature do
 
     scenario 'User can not add questionnaire' do
       click_link 'Создать новую анкету'
-      expect(page).to have_content 'You need to sign in or sign up before continuing.'
+      expect(page).to have_content 'Вам необходимо войти в систему или зарегистрироваться.'
     end
 
     scenario 'User can not delete questionnaire' do
       click_on(class: 'btn-outline-danger', match: :first)
-      expect(page).to have_content 'You need to sign in or sign up before continuing.'
+      expect(page).to have_content 'Вам необходимо войти в систему или зарегистрироваться.'
     end
 
     scenario 'User can not edit questionnaire' do
       click_on('???????', match: :first)
-      expect(page).to have_content 'You need to sign in or sign up before continuing.'
+      expect(page).to have_content 'Вам необходимо войти в систему или зарегистрироваться.'
     end
 
     scenario 'User can find questionnaire by code' do

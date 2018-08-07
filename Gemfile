@@ -43,6 +43,7 @@ gem 'octicons_helper'
 
 # Use Devise gem for authentication
 gem 'devise'
+gem 'devise-i18n'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
