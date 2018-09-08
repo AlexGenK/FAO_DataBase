@@ -23,7 +23,7 @@ feature 'Work with questionnaires', type: :feature do
 
     scenario 'User can add questionnaire' do
       click_link 'Создать новую анкету'
-      fill_in('ФИО ребенка', with: 'Johnny Mnemonic')
+      fill_in('ФИО', with: 'Johnny Mnemonic')
       fill_in('Код', with: 999)
       click_button 'Сохранить анкету'
       expect(page).to have_questionnaires_in_quantity 6
@@ -38,7 +38,7 @@ feature 'Work with questionnaires', type: :feature do
     scenario 'User can edit questionnaire' do
       expect(page).not_to have_content 'Molly Millions'
       click_link @quest_list[0].fio
-      fill_in('ФИО ребенка', with: 'Molly Millions')
+      fill_in('ФИО', with: 'Molly Millions')
       click_button 'Сохранить анкету'
       expect(page).to have_content 'Molly Millions'
       expect(page).to have_questionnaires_in_quantity 5
