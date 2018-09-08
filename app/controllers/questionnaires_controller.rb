@@ -59,7 +59,8 @@ class QuestionnairesController < ApplicationController
   def questionnaire_params
       params.require(:questionnaire).permit(:fio, :code, :sex, :age_years, :age_months, :place, :graduate, 
                                             :weight, :height, :bmi, :abdominal_pain, :headache, :concentration,
-                                            :fatigability, :average_score, :category,
+                                            :fatigability, :average_score, :category, :children_weight,
+                                            :children_height, :children_bmi,
                                             :i_1_1, :i_1_2, :i_1_3, :i_1_4, :i_1_5, :i_1_6, :i_1_7, :i_1_8,
                                             :i_1_9, :i_1_10, :i_1_11, 
                                             :i_2_1, :i_2_2, :i_2_3, :i_2_4, :i_2_5, :i_2_6, :i_2_7, :i_2_8,
