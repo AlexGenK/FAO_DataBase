@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_08_170936) do
+ActiveRecord::Schema.define(version: 2018_09_08_174432) do
 
   create_table "questionnaires", force: :cascade do |t|
     t.string "fio"
@@ -457,6 +457,16 @@ ActiveRecord::Schema.define(version: 2018_09_08_170936) do
     t.integer "children_weight"
     t.integer "children_height"
     t.integer "children_bmi"
+    t.text "iv_3_4"
+    t.text "iv_4_4"
+    t.text "iv_5_4"
+    t.text "iv_6_5"
+    t.text "iv_9_4"
+    t.text "iv_10_5"
+    t.boolean "iv_11_1"
+    t.boolean "iv_11_2"
+    t.boolean "iv_11_3"
+    t.text "iv_11_4"
   end
 
   create_table "users", force: :cascade do |t|
