@@ -1,5 +1,6 @@
 <% visual_lines.each do |key, value| %>
 	<% if value.is_a? Symbol %>
+		<% raise "Undefined column #{value}" if Questionnaire.columns_hash[value.to_s] == nil %>
 		<% case Questionnaire.columns_hash[value.to_s].type %>
 		<% when :boolean %>
 		<div class="form-group row">
