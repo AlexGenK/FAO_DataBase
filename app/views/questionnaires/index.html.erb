@@ -31,15 +31,16 @@
 					<th scope='col'>Возраст (года)</th>
 					<th scope='col'>Возраст (месяцы)</th>
 					<th scope='col'>Проживание</th>
+					<th scope='col'>Область</th>
 					<th scope='col'>Образование</th>
 					<th scope='col'>Масса</th>
 					<th scope='col'>Рост</th>
 					<th scope='col'>Индекс массы</th>
 					<th scope='col'>Боли в животе</th>
 					<th scope='col'>Головные боли</th>
-					<th scope='col'>Концентрация</th>
-					<th scope='col'>Утомляемость</th>
-					<th scope='col'>Успеваемость</th>
+					<th scope='col'>Концен- трация</th>
+					<th scope='col'>Утомля- емость</th>
+					<th scope='col'>Успева- емость</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -59,6 +60,7 @@
 					<td><%= item.age_years %></td>
 					<td><%= item.age_months %></td>
 					<td><%= item.place %></td>
+					<td><%= item.region %></td>
 					<td><%= Questionnaire::EDUCATION[item.graduate] %></td>
 					<td><%= item.weight %></td>
 					<td><%= item.height %></td>
