@@ -16,6 +16,7 @@ class QuestionnairesController < ApplicationController
                                           params[:search]).order(:fio)
     @count = @questionnaires.count
     @pagy, @questionnaires = pagy(@questionnaires)
+    @offset = @pagy.offset
   end
 
   def new
