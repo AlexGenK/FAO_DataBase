@@ -23,6 +23,7 @@
 		<table class="table table-bordered table-hover table-sm">
 			<thead>
 				<tr>
+					<th scope='col'>#</th>
 					<th scope='col'></th>
 					<th scope='col'>ФИО</th>
 					<th scope='col'>Категория</th>
@@ -44,8 +45,9 @@
 				</tr>
 			</thead>
 			<tbody>
-			<% @questionnaires.each do |item| %>
+			<% @questionnaires.each_with_index do |item, index| %>
 				<tr>
+					<td><%= index+1 %></td>
 					<td>
 						<%= button_to item, method: :delete, class: 'btn btn-outline-danger btn-sm', data: { confirm: 'Вы уверенны, что хотите удалить запись?' } do %>
 							<%= octicon "x", class: "text-danger" %>
@@ -76,3 +78,4 @@
 		</table>
 	</div>
 </div>
+<%== pagy_nav_bootstrap(@pagy) %>
