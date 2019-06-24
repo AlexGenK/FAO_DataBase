@@ -180,10 +180,10 @@
 	<br>
 	<%= render partial: 'quest', locals: {visual_lines: Questionnaire::VISUAL_STRUCT, form: f} %>
 	<div class='form-group row'>
-		<div class='col-sm-2'>
+		<div class='col-sm-6 col-md-3 col-lg-2'>
 			<%= f.submit "Сохранить анкету", class: 'btn btn-outline-secondary' %>
 		</div>
-		<div class='col-sm-2'>
+		<div class='col-sm-6 col-md-5 col-lg-4'>
 			<%= link_to 'Вернуться без сохранения', questionnaires_path, class: "btn btn-outline-danger" %>
 		</div>
 	</div>
