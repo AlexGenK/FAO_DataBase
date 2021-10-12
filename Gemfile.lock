@@ -141,7 +141,8 @@ GEM
     pagy (2.1.5)
     popper_js (1.14.5)
     public_suffix (3.0.3)
-    puma (3.12.6)
+    puma (4.3.9)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -267,7 +268,7 @@ DEPENDENCIES
   jquery-rails
   octicons_helper
   pagy
-  puma (~> 3.12)
+  puma (~> 4.3)
   rails (~> 5.2.4.3)
   rspec-rails (~> 3.7)
   sass-rails (~> 5.0)
